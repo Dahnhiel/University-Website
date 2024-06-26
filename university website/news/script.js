@@ -3,13 +3,7 @@ $(document).ready(function () {
     console.log("i was clicked");
   });
 
-  $(".newsImg").mouseenter(() => {
-    $(".newsImg").addClass("zoom")
-  });
-
-  $(".newsImg").mouseout(() => {
-    $(".newsImg").removeClass("zoom")
-  });
+  ccc
 
   $(".recent-btn").click(() => {
     $(".old").hide();

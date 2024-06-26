@@ -133,4 +133,22 @@ $(document).ready(() => {
     
   })
 
+  $(".gallery-img img").click(() => {
+    $(".modal").css("display", "block");
+    $("#img01").attr('src', this.src);
+
+  })
+
+  $(".close").click(() => {
+    $(".modal").css("display", "none")
+  })
+
+  // $(".gallery-img img").mouseenter(() => {
+  //   $(".gallery-img img").addClass("zoom")
+  // });
+
+  // $(".gallery-img img").mouseout(() => {
+  //   $(".gallery-img img").removeClass("zoom")
+  // });
+
 })
