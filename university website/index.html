@@ -23,7 +23,7 @@
 
   <link href="assets/lib/bootstrap/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-  <link href="assets/lib/aos/aos.css" rel="stylesheet" />
+  <!-- <link href="assets/lib/aos/aos.css" rel="stylesheet" /> -->
 
   <!-- Main CSS File -->
   <link href="main.css" rel="stylesheet" />
@@ -32,56 +32,60 @@
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="logo">University</h1>
-        <span>.</span>
+        <h1 class="sitename">University</h1><span>.</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#course">Courses</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#news">News</a></li>
-          <li class="dropdown">
-            <a href="#"><span>Faculty</span>
-              <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html#hero" class="active">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#course">Courses</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#news">News</a></li>
+          <li class="dropdown"><a href="#"><span>Faculty</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Social Science</a></li>
-              <li><a href="#">Engineering</a></li>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
               <li><a href="#">Dropdown 3</a></li>
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <div class="searchContainer d-flex flex-row">
-        <input type="search" name="search" id="search" class="rounded-start-3 p-2" />
-        <input type="submit" id="search-btn"
-        class="rounded-end-3 border-primary border-3 border-solid bg-primary text-white fw-500 fs-5" value="Search" />
-      </div>
+
+      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+
     </div>
-    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
   </header>
 
   <main class="main">
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-      <img src="news/img/bg-home.gif" alt="" data-aos="fade-in" />
+      <img src="news/img/bg-home.gif" alt="" />
 
       <div class="container d-flex flex-column justify-content-center align-items-center">
         <div class="row">
           <div class="col-lg-10 d-flex flex-column justify-content-center align-items-center">
-            <h2 data-aos="fade-up" data-aos-delay="100" class="text-center">
+            <h2 class="text-center">
               Welcome to Our University
             </h2>
-            <p data-aos="fade-up" data-aos-delay="200" class="text-center">
+            <p class="text-center">
               Education Is The Only Weapon That Can Change The World
             </p>
-            <button class="rounded-4 p-2 text-white fs-4 fw-600 mt-4 call-to-action-btn" id="call-to-action-btn"
-              data-aos="fade-up" data-aos-delay="300">
+            <button class="rounded-4 p-2 text-white fs-4 fw-600 mt-4 call-to-action-btn" id="call-to-action-btn">
               <div></div>Get Started
             </button>
           </div>
@@ -123,7 +127,7 @@
               </div>
   
               <div class="card course-card business ">
-                <img class="card-img-top course-img" src="" alt="business" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/banking.jpg" alt="business" style="width:100%">
                 <div class="card-body">
                   <h4>Banking</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -139,7 +143,7 @@
               </div>
   
               <div class="card course-card language">
-                <img class="card-img-top course-img" src="/w3images/nature.jpg" alt="language" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/english.jpg" alt="language" style="width:100%">
                 <div class="card-body">
                   <h4>English Language</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -147,7 +151,7 @@
               </div>
   
               <div class="card course-card science">
-                <img class="card-img-top course-img" src="/w3images/people3.jpg" alt="science" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/medicine.jpg" alt="science" style="width:100%">
                 <div class="card-body">
                   <h4>Medicine</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -155,15 +159,15 @@
               </div>
             
               <div class="card course-card column science">
-                <img class="card-img-top course-img" src="/w3images/people3.jpg" alt="science" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/dental.jpg" alt="science" style="width:100%">
                 <div class="card-body">
-                  <h4 class="card-title">Dental Science</h4>
+                  <h4>Dental Science</h4>
                   <p>Lorem ipsum dolor..</p>
                 </div>
               </div>
 
               <div class="card course-card engineering">
-                <img class="card-img-top course-img" src="/w3images/cars1.jpg" alt="engineering" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/mechanical.jpg" alt="engineering" style="width:100%">
                 <div class="card-body">
                   <h4>Mechanical Engineering</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -171,9 +175,9 @@
               </div>
   
               <div class="card course-card column art">
-                <img class="card-img-top course-img" src="/w3images/cars2.jpg" alt="art" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/literature.jpg" alt="art" style="width:100%">
                 <div class="card-body">
-                  <h4 class="card-title">Literature</h4>
+                  <h4>Literature</h4>
                   <p>Lorem ipsum dolor..</p>
                 </div>
               </div>
@@ -181,31 +185,31 @@
               <div class="card course-card column engineering">
                 <img class="card-img-top course-img" src="./courses/img/software.JPG" alt="engineering" style="width:100%">
                 <div class="card-body">
-                  <h4 class="card-title">Software Engineering</h4>
+                  <h4>Software Engineering</h4>
                   <p>Lorem ipsum dolor..</p>
                 </div>
               </div>
   
               <div class="card course-card column social-science">
-                <img class="card-img-top course-img" src="/w3images/cars3.jpg" alt="social science" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/masscom.jpg" alt="social science" style="width:100%">
                 <div class="card-body">
-                  <h4 class="card-title">Mass Communication</h4>
+                  <h4>Mass Communication</h4>
                   <p>Lorem ipsum dolor..</p>
                 </div>
               </div>
             
               <div class="card course-card column art">
-                <img class="card-img-top course-img" src="/w3images/people1.jpg" alt="art" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/painting.jpg" alt="art" style="width:100%">
                 <div class="card-body">
-                  <h4 class="card-title">Painting</h4>
+                  <h4>Painting</h4>
                   <p>Lorem ipsum dolor..</p>
                 </div>
               </div>
   
               <div class="card course-card column engineering">
-                <img class="card-img-top course-img" src="/w3images/cars1.jpg" alt="engineering" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/Civil-engineers.jpg" alt="engineering" style="width:100%">
                 <div class="card-body">
-                  <h4 class="card-title">Civil Engineering</h4>
+                  <h4>Civil Engineering</h4>
                   <p>Lorem ipsum dolor..</p>
                 </div>
               </div>
@@ -213,16 +217,16 @@
               <div class="card course-card text-start engineering">
                 <img class="card-img-top course-img" src="./courses/img/network.JPG" alt="engineering" />
                 <div class="card-body">
-                  <h4 class="card-title">Networking</h4>
+                  <h4>Networking</h4>
                   <p class="card-text">Lorem ipsum dolor...</p>
                 </div>
               </div>
               
   
               <div class="card course-card column science">
-                <img class="card-img-top course-img" src="/w3images/people3.jpg" alt="science" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/surgery.jpg" alt="science" style="width:100%">
                 <div class="card-body">
-                  <h4 class="card-title">Surgery</h4>
+                  <h4>Surgery</h4>
                   <p>Lorem ipsum dolor..</p>
                 </div>
               </div>
@@ -230,13 +234,13 @@
               <div class="card course-card column engineering">
                 <img class="card-img-top course-img" src="./courses/img/electrical-1.JPG" alt="engineering" style="width:100%">
                 <div class="card-body">
-                  <h4 class="card-title">Electrical Engineering</h4>
+                  <h4>Electrical Engineering</h4>
                   <p>Lorem ipsum dolor..</p>
                 </div>
               </div>
   
               <div class="card course-card column science">
-                <img class="card-img-top course-img" src="/w3images/people3.jpg" alt="science" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/astronomy.jpg" alt="science" style="width:100%">
                 <div class="card-body">
                   <h4>Astronology</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -244,9 +248,9 @@
               </div>
   
               <div class="card course-card column language">
-                <img class="card-img-top course-img" src="/w3images/cars1.jpg" alt="language" style="width:100%">
+                <img class="card-img-top course-img" src="./courses/img/potuguese.jpg" alt="language" style="width:100%">
                 <div class="card-title">
-                  <h4>Portugues</h4>
+                  <h4>Portuguese</h4>
                   <p>Lorem ipsum dolor..</p>
                 </div>
               </div>
@@ -261,7 +265,7 @@
     <!-- About Section -->
     <section id="about" class="about container-fluid section min-vh-100 d-flex flex-column justify-content-center align-items-center">
       <h3 class="fs-2 fw-bold text-center">About Us</h3>
-      <div class="container d-flex flex-column justify-content-center align-items-center gap-4" id="aboutContainer" data-aos="fade-up" data-aos-delay="100">
+      <div class="container d-flex flex-column justify-content-center align-items-center gap-4" id="aboutContainer">
           <p class="fs-4 text-center">
             Welcome to University, a vibrant community of scholars, learners, and innovators.
             Our mission is to provide a transformative education that empowers students to reach
@@ -278,9 +282,9 @@
 
     <!-- Stats Section -->
     <section id="stats" class="stats section d-flex flex-row justify-content-center align-items-center">
-      <img src="hero-bg.jpg" alt="" data-aos="fade-in" />
+      <img src="hero-bg.jpg" alt="" />
 
-      <div class="container stats-container position-relative d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="container stats-container position-relative d-flex flex-row justify-content-center">
         <div class="row gy-3 d-flex justify-content-between">
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
@@ -354,12 +358,12 @@
             <img src="./gallery/img/masonry-portfolio-5.jpg" style="width:100%">
             <img src="./gallery/img/masonry-portfolio-4.jpg" style="width:100%">
             <img src="./gallery/img/masonry-portfolio-3.jpg" style="width:100%">
-            <img src="./gallery/img/masonry-portfolio-2.jpg" style="width:100%">
+            <img src="./gallery/img/masonry-portfolio-2.jpg" style="width:100%" class="idk">
           </div>
 
           <div id="myModal" class="modal">
             <span class="close">&times;</span>
-            <img class="modal-content" id="img01">
+            <img class="modal-content" id="img01" src="" alt="image">
             <div id="caption"></div>
           </div>
         
@@ -371,7 +375,7 @@
     <!-- faculty members start -->
      <section class="faculty-section container-fluid">
       <h1 class="text-center">Faculty Members</h1>
-      <div class="card-group gap-5 justify-content-center mt-5">
+      <div class="gap-5 mt-5 card-columns d-flex flex-row min-vh-100 flex-wrap container-fluid justify-content-center align-items-center">
         <div class="card">
           <img
             class="card-img-top"
@@ -448,7 +452,7 @@
         <button class="btn text-primary recent-btn" onclick="filterSelection('recent')">Recent News</button>
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="100" class="gap-5 mt-5 card-columns d-flex flex-row min-vh-100 flex-wrap container-fluid justify-content-center align-items-center">
+      <div class="gap-5 mt-5 card-columns d-flex flex-row min-vh-100 flex-wrap container-fluid justify-content-center align-items-center">
 
         <div class="card recent-news news-card">
           <img class="card-img-top newsImg " src="news/img/blog-1.jpg" alt="Card image">
@@ -542,7 +546,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Contact</h2>
         <p>
           Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
@@ -551,12 +555,12 @@
       </div>
       <!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6">
             <div class="row gy-4">
               <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                <div class="info-item">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
                   <p>1000, Lekki Street</p>
@@ -566,7 +570,7 @@
               <!-- End Info Item -->
 
               <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                <div class="info-item">
                   <i class="bi bi-telephone"></i>
                   <h3>Call Us</h3>
                   <p>+234 811 9385 500</p>
@@ -575,7 +579,7 @@
               <!-- End Info Item -->
 
               <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                <div class="info-item">
                   <i class="bi bi-envelope"></i>
                   <h3>Email Us</h3>
                   <p>enigbewodaniel@outlook.com</p>
@@ -584,7 +588,7 @@
               <!-- End Info Item -->
 
               <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                <div class="info-item">
                   <i class="bi bi-clock"></i>
                   <h3>Open Hours</h3>
                   <p>Monday - Friday</p>
@@ -596,7 +600,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="#" method="post" class="form" data-aos="fade-up" data-aos-delay="200">
+            <form action="#" method="post" class="form">
               <div class="row gy-4">
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
@@ -651,8 +655,8 @@
           <h4>Useful Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">About us</a></li>
-            <li><a href="#">Courses</a></li>
+            <li><a href="index.html#about">About us</a></li>
+            <li><a href="#course">Courses</a></li>
             <li><a href="#">Privacy policy</a></li>
           </ul>
         </div>
@@ -695,7 +699,7 @@
 
   <!-- lib JS Files -->
   <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="assets/lib/aos/aos.js"></script>
+  <!-- <script src="assets/lib/aos/aos.js"></script> -->
   <script src="assets/lib/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/lib/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/glightbox/js/glightbox.min.js"></script>

@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: blue;
+  /* color: blue; */
   text-decoration: none;
   transition: 0.3s;
 }
@@ -27,12 +27,15 @@ h6 {
   font-family: sans-serif;
 }
 
+/*-------------------------------------------------------------
+# Header
+-------------------------------------------------------------*/
 .header {
+  color: var(--default-color);
+  background-color: transparent;
   padding: 20px 0;
   transition: all 0.5s;
-  z-index: 999;
-  margin-bottom: 100vh;
-  /* background-color: white; */
+  z-index: 997;
 }
 
 .header .logo {
@@ -45,27 +48,34 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 24px;
+  font-size: 28px;
   margin: 0;
-  font-weight: 600;
-  /* color: var(--heading-color); */
+  font-weight: 700;
+  color: blue;
 }
 
 .header .logo span {
-  /* color: var(--accent-color); */
   font-size: 24px;
   font-weight: 600;
   padding-left: 3px;
 }
 
-.header #search {
-  border: 1px solid blue;
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
+  color: white;
+  background: blue;
+  font-size: 14px;
+  padding: 8px 26px;
+  margin: 0;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
-.header #search:focus {
-  outline: none;
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover {
+  color: whitesmoke;
+  background: color-mix(in srgb, blue transparent 15%);
 }
-
 
 @media (max-width: 1200px) {
   .header .logo {
@@ -83,35 +93,33 @@ h6 {
   }
 }
 
-.scrolled .header  {
+.scrolled .header {
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
-}
-
-.scrolled {
-  background: white;
-  --nav-color: black;
 }
 
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
-    --nav-color: white;
-    --background-color: white;
+  --background-color: rgba(255, 255, 255, 0);
+  --heading-color: green;
+  --nav-color: rgba(255, 255, 255, 0.5);
+  --nav-hover-color: #ffffff;
 }
 
 /* Index Page Header on Scroll
 ------------------------------*/
-.index-page.scrolled .header{
-  /* --nav-hover-color: #e84545; */
-  background: var(--background-color);
-  --nav-color: #3a3939;
+.index-page.scrolled .header {
+  background-color: #ffffff;
+  --heading-color: #32353a;
+  --nav-color: black;
+  --nav-hover-color: blue;
 }
 
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
-@media (min-width: 700px) {
+@media (min-width: 1200px) {
   .navmenu {
     padding: 0;
   }
@@ -133,7 +141,7 @@ h6 {
     color: var(--nav-color);
     padding: 18px 15px;
     font-size: 16px;
-    font-family: inherit;
+    font-family: sans-serif;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -158,7 +166,6 @@ h6 {
   .navmenu .active,
   .navmenu .active:focus {
     color: blue;
-    /* outline: 1px solid white; */
   }
 
   .navmenu .dropdown ul {
@@ -185,9 +192,7 @@ h6 {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
-    color: blue;
-    /* margin-bottom: 5px; */
-    border-bottom: 1px solid grey;
+    color: blue
   }
 
   .navmenu .dropdown ul a i {
@@ -221,20 +226,19 @@ h6 {
 }
 
 /* Navmenu - Mobile */
-@media (max-width: 700px) {
+@media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: white;
+    color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
-    display: flex;
   }
 
   .navmenu {
     padding: 0;
-    z-index: 9997;
+    z-index: 99999;
   }
 
   .navmenu ul {
@@ -244,17 +248,16 @@ h6 {
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: black;
+    background-color: white;
     overflow-y: auto;
     transition: 0.3s;
-    z-index: 9998;
-    box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 90%);
-    opacity: 0.5;
+    z-index: 99999;
+    box-shadow: 0px 0px 30px black;
   }
 
   .navmenu a,
   .navmenu a:focus {
-    color: white;
+    color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: sans-serif;
     font-size: 17px;
@@ -278,7 +281,7 @@ h6 {
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s;
-    background-color: black;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
   }
 
   .navmenu a i:hover,
@@ -306,19 +309,19 @@ h6 {
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
-    background-color: red;
+    background-color: var(--nav-dropdown-background-color);
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: none;
     transition: all 0.5s ease-in-out;
   }
 
   .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41);
+    background-color: rgba(33, 37, 41, 0.1);
   }
 
   .navmenu .dropdown>.dropdown-active {
     display: block;
-    background-color: rgb(139, 13, 241);
+    background-color: rgba(33, 37, 41, 0.03);
   }
 
   .mobile-nav-active {
@@ -339,7 +342,7 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(102, 26, 173, 0.8);
+    background: rgba(33, 37, 41, 0.8);
     transition: 0.3s;
   }
 
@@ -476,7 +479,7 @@ h6 {
   opacity: 0;
   right: 15px;
   bottom: 25px;
-  z-index: 99999;
+  z-index: 99;
   background-color: blue;
   width: 40px;
   height: 40px;
@@ -707,6 +710,10 @@ section,
 /*--------------------------------------------------------------
 # Gallery starts
 --------------------------------------------------------------*/
+body.modal-open {
+  overflow: hidden;
+}
+
 .gallery-container .column {
   -ms-flex: 25%;
   flex: 25%;

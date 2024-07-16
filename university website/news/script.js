@@ -3,7 +3,7 @@ $(document).ready(function () {
     console.log("i was clicked");
   });
 
-  ccc
+  
 
   $(".recent-btn").click(() => {
     $(".old").hide();
