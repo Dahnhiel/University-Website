@@ -95,6 +95,7 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 
 /* Index Page Header
@@ -108,11 +109,12 @@ h6 {
 
 /* Index Page Header on Scroll
 ------------------------------*/
-.index-page.scrolled .header {
+.scrolled {
   background-color: #ffffff;
-  --heading-color: #32353a;
-  --nav-color: black;
-  --nav-hover-color: blue;
+}
+
+.scrolled .navmenu ul a {
+  color: black;
 }
 
 /*--------------------------------------------------------------
@@ -138,7 +140,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color:white;
     padding: 18px 15px;
     font-size: 16px;
     font-family: sans-serif;
